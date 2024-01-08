@@ -14,6 +14,8 @@ buttonOk.addEventListener( "click", function(){
     document.getElementById('nome-passeggero').innerHTML= nomePersonaHtml.value;
     document.getElementById('short-number').innerHTML= numberS;
     document.getElementById('long-number').innerHTML= numberB;
+    var finalTicket = document.getElementById("final-ticket");
+    finalTicket.classList.remove("d-none");
 
 if (anniHtml.value>=18 && anniHtml.value<=65){
     document.getElementById('discount').innerHTML='<p>Biglietto Standard</p>';
@@ -32,6 +34,5 @@ if (anniHtml.value>=18 && anniHtml.value<=65){
     document.getElementById('price-generated').innerHTML='<p> Prezzo: €' + " " + seniorFormatted + '</p>';
     console.log("prezzo scontato per over65:", seniorFormatted)
     document.getElementById('discount').innerHTML='<p>Biglietto Over 65</p>';
-    document.getElementById('nome-passeggero').innerHTML= NomePersonaHtml;
 }
 })
